@@ -92,7 +92,7 @@ nav li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(180deg, #000 0%, #574767 100%);
+    background: #000;
     height: 648px;
 }
 
