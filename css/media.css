@@ -1,0 +1,455 @@
+@media screen and (max-width: 992px) {
+    /*Шапка*/
+    .logo_mob {
+        display: initial;
+        width: 160px;
+        height: 64px; 
+        margin: 24px;
+    }
+    nav {
+        display: none;
+    }
+    .mob_header {
+        display: flex;
+        align-items: center;
+    }
+    .header_burger {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        margin: 44px auto 44px auto;
+        z-index: 5;
+        right: 32px;
+    }
+    .header_burger span {
+        position: absolute;
+        background-color: #000000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header_burger:before,
+    .header_burger:after {
+        content: '';
+        background-color: #000000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header_burger:before {
+        top: 0;
+    }
+    .header_burger:after {
+        bottom: 0;
+    }
+    .header_burger.active {
+        background: none;
+    }
+    .header_burger.active span{
+        transform: scale(0);
+    }
+    .header_burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .menu {
+        display: initial;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        background-color: #9D81BA;
+        transition: all 0.3s ease 0s;
+        z-index: 4;
+    }
+    .menu.active  {
+        top: 0px;
+        background-color: #9D81BA;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        gap: 48px;
+        margin-top: 120px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    /*Заголовок*/
+    /*.main_photo {
+        display: none;
+    }
+    .main_photo_mob {
+        display: initial;
+        position: absolute;
+        width: 100%;
+        height: 528px;
+        background-size: cover;
+        object-fit:cover; 
+    }*/
+    .title {
+        height: 528px;
+    }
+    .title_text1 {
+        display: none;
+    }
+    .title_text1_mob {
+        display: initial;
+        position: relative;
+    }
+    .title_text2 {
+        font-size: 14px;
+    }
+    .title_text {
+        gap: 12px;
+        margin-top: 96px;
+    }
+    .button {
+        width: 204px;
+        height: 60px;
+        font-size: 16px;
+    }
+    /*О нас*/
+    #about-us {
+        margin-top: 48px;
+    }
+    .about_us_title{
+        font-size: 24px;
+    }
+    .rectangle1 {
+        width: 54px;
+height: 12px;
+    }
+    .rectangle {
+        margin: 24px auto auto 32px;
+    }
+    .about_us_description {
+        gap: 28px;
+        margin: 8px auto auto 90px;
+    }
+    .about_us_text1, .ways {
+    font-size: 4vw;
+    padding-right: 48px;
+    }
+    .ways {
+        margin-left: 24px;
+    }
+    .about_us_photos{
+        display: none;
+    }
+    .photo1, .photo2, .photo3 {
+        width: 334px;
+height: 222px;
+    }
+    .about_us_photos_mob {
+        display: initial;
+        max-width: 390px;
+        min-width: 390px;
+        
+    }
+    .slideshow_and_buttons {
+        display: flex;
+        align-items: center;
+        margin: 48px 28px 12px 28px;
+    }
+    
+    .slideshow-container {
+        margin: 0 -42px 0 -42px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        padding: 16px;  
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .next {
+        border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        
+    }
+    
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+    
+        to {
+            opacity: 1
+        }
+    }
+    /*Тренеры*/
+
+    .trainers_title {
+        color: #000;
+    font-size: 24px;
+    margin: 48px 86px;
+    }
+    .trainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .trainer_photo, .trainer_block {
+        width: 290px;
+height: 320px;
+    }
+    .trainer_title {
+        font-size: 20px;
+    }
+    .trainer_text2 {
+        font-size: 12px;
+    }
+    .trainer_title_and_text {
+        gap: 4px;
+        margin: 13px auto auto 21px;
+    }
+    .trainer1_desc, .trainer1_desc2 {
+    font-size: 12px;
+    }
+    .trainer1_desc {
+        margin: 21px auto 20px 0;
+    }
+    .desc1_desc2 {
+        margin: auto auto auto 20px;
+    }
+    .trainer1_desc2 {
+        gap: 8px;
+        margin: auto 14px;
+    }
+    .all-trainers {
+        gap: 24px;
+    }
+    /*Услуги и цены*/
+    #prices {
+        margin-top: 48px;
+    }
+    .prices_title {
+        margin-bottom: 48px;
+        font-size: 24px;
+    }
+    .prices_block {
+        width: 304px;
+height: 251px;
+border: 2px solid #D9D9D9;
+    }
+    .block_icon {
+        width: 40px;
+height: 40px;
+    }
+    .poledance_title {
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+    .icon_and_title {
+        gap: 12px;
+        margin: 12px auto 12px 12px;
+    }
+    .ruble {
+        font-size: 20px;
+        margin-right: 18px;
+    }
+    .line {
+        width: 270px;
+height: 1px;
+    }
+    .exercises {
+        margin: 16px auto auto 16px;
+        gap: 8px;
+    }
+    .exercise_name {
+        font-size: 12px;
+        }
+
+        .price_exercise {
+        font-size: 14px;
+        margin-right: 18px;
+        }
+        .prices_exercise {
+            margin: 14px 0px auto auto;
+            gap: 6px;
+        }
+    .abonement {
+        font-size: 10px;
+        margin: 8px auto;
+    }
+    .special {
+        width: 304px;
+height: 472px;
+margin-top: 40px;
+    }
+    .special_title {
+        font-size: 20px;
+        margin: 18px auto 8px auto;
+        width: 132px;
+    }
+    .mini_rectangle {
+        width: 34px;
+height: 3px;
+    }
+    .circle {
+        width: 8px;
+height: 8px;
+    }
+    .circle_and_rectangles {
+        gap: 22px;
+        margin-bottom: 24px;
+    }
+    .cards {
+flex-direction: column;
+gap: 20px;
+    }
+    .card, .card2 {
+        width: 156px;
+height: 102px;
+    }
+    .card_title, .card2_title, .card3_title {
+    font-size: 14px;
+    }
+    .rectangle_price {
+    width: 74px;
+height: 24px;
+    }
+    .rectangle2_price {
+    width: 97px;
+height: 24px;
+margin-top: 12px;
+    }
+    .card_price {
+        font-size: 12px;
+    }
+    .card_title {
+        height: 40px;
+    }
+    .card2_title {
+        font-size: 12px;
+    }
+    /*Контакты*/
+    .contacts_title {
+        font-size: 24px;
+    }
+    .map_yandex {
+        width: 100%;
+height: 170px;
+    }
+    .address, .phone {
+        gap: 12px;
+    }
+    .map_icon {
+        width: 10px;
+height: 16px;
+    }
+    .phone_icon {
+        width: 14px;
+height: 14px;
+    }
+    .address_title, .phone_title {
+    font-size: 14px;
+    }
+    .address {
+        margin: 36px auto 12px auto;
+    }
+    /*Футер*/
+    footer {
+height: 332px;
+flex-direction: column;
+gap: 34px;
+    }
+    .logo_footer {
+            width: 232px;
+        height: 92px;
+        margin: 16px auto 0 auto;
+        }
+    .footer_title {
+        font-size: 20px;
+    }
+    .line1_footer {
+        width: 96px;
+    }
+    .line2_footer {
+        width: 146px;
+    }
+    .menu_and_media {
+        gap: 54px;
+    }
+    .nav-links_footer {
+        gap: 10px;
+    font-size: 14px;
+    }
+    .media_desc {
+        font-size: 12px;
+    }
+    .menu_and_media {
+        gap: 54px;
+    }
+    .menu_footer {
+        margin-left: 56px;
+    }
+    .whatsapp, .vk {
+    width: 32px;
+height: 32px;
+    }
+    .telegram {
+        width: 36px;
+height: 36px;
+    }
+    .icons_media {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+}
+
