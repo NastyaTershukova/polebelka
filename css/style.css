@@ -526,6 +526,7 @@ font-weight: 400;
 }
 .line2_footer {
     width: 260px;
+    margin-left: 0;
 }
 .menu_and_media {
     display: flex;
